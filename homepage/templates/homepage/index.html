@@ -8,7 +8,8 @@
     <meta name="description" content="Forrest Deters is a web developer, musician, and games enthusiast based in the
     Portland, Oregon Metropolitan Area. This is his website!">
     <link href='https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="style.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'homepage/style.css' %}">
     <title>Forrest Deters</title>
 </head>
 <body>
@@ -34,6 +35,6 @@
             </div>
         </div>
     </nav>
-    <script src="index.js"></script>
+<!--    <script src="index.js"></script>-->
 </body>
 </html>
