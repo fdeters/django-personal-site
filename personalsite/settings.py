@@ -28,6 +28,7 @@ SECRET_KEY = config('SECRET_KEY', default='cg#p$g+j9tax!#a3cup@1$8obt2_+&k3q+pmu
 DEBUG = config('DJANGO_DEBUG', default='') != 'False'
 
 ALLOWED_HOSTS = [
+    'https://sleepy-island-28170.herokuapp.com/',
     'forrestdeters.com',
     'www.forrestdeters.com',
     'localhost',
