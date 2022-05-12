@@ -28,21 +28,29 @@ SECRET_KEY = config('SECRET_KEY', default='cg#p$g+j9tax!#a3cup@1$8obt2_+&k3q+pmu
 DEBUG = config('DJANGO_DEBUG', default='') != 'False'
 
 ALLOWED_HOSTS = [
+    'sleepy-island-28170.herokuapp.com',
     'forrestdeters.com',
     'www.forrestdeters.com',
     'localhost',
+    '127.0.0.1',
 ]
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    # Django
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # Django extensions
+    "django_extensions",
+
+    # this website
     'homepage.apps.HomepageConfig'
 ]
 
@@ -142,3 +150,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
+
+# SSL Redirect: Attempts to redirect HTTP requests to HTTPS
+SECURE_SSL_REDIRECT=True

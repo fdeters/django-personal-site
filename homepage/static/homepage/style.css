@@ -88,7 +88,7 @@ nav {
 }
 
 .panel-music {
-    background-image: url('images/music-background.png'); /* fallback */
+    background-image: url('images/music-background.jpg'); /* fallback */
     background-image: linear-gradient(
         to right bottom,
         transparent,
